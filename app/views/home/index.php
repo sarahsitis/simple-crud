@@ -33,10 +33,39 @@
 <!-- Modal Structure -->
 <div id="addData" class="modal">
     <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+        <h4 align="center">Add New Book</h4>
+        <div class="row">
+            <form action="<?= BASEURL; ?>home/add" method="post" class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="title" name="title" type="text" class="validate">
+                        <label for="title">Book Title</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="author" name="author" type="text" class="validate">
+                        <label for="author">Author</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="publisher" name="publisher" type="text" class="validate">
+                        <label for="publisher">Publisher</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="price" name="price" type="number" class="validate">
+                        <label for="price">Price</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="modal-close waves-effect waves-green btn-small red">Cancel</a>
+                    <button type="submit" class="modal-close waves-effect waves-green btn-small teal">Add Data</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
+
 </div>

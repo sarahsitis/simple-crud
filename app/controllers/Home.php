@@ -20,4 +20,12 @@ class Home extends Controller
         $this->view('home/detail', $data);
         $this->view('templates/footer');
     }
+
+    public function add()
+    {
+        if ($this->model('Book_model')->addNewBook($_POST) > 0) {
+            header('Location: ' . BASEURL . 'home');
+            exit;
+        }
+    }
 }
