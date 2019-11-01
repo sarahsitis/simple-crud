@@ -1,7 +1,7 @@
 <!-- content table -->
 <div class="container">
     <h3 class="center">Book List</h3>
-    <a class="btn-floating btn-large waves-effect waves-light red right tooltipped modal-trigger" data-position="bottom" data-tooltip="Add New Data" href="#addData"><i class="material-icons">add</i></a>
+    <a class="btn-floating btn-large waves-effect waves-light teal lighten-2 right tooltipped modal-trigger" data-position="bottom" data-tooltip="Add New Data" href="#addData"><i class="material-icons">add</i></a>
     <table class="highlight responsive-table">
         <thead>
             <tr>
@@ -9,6 +9,7 @@
                 <th>Author</th>
                 <th>Publisher</th>
                 <th>Price</th>
+                <th></th>
             </tr>
         </thead>
 
@@ -19,6 +20,10 @@
                     <td><?= $book['author']; ?></td>
                     <td><?= $book['publisher']; ?></td>
                     <td>Rp. <?= $book['price']; ?></td>
+                    <td>
+                        <a class="waves-effect waves-light btn-small  blue lighten-2 tooltipped" data-position="bottom" data-tooltip="Detail" href="<?= BASEURL; ?>home/detail/<?= $book['id']; ?>"><i class="material-icons">details</i></a>
+                        <a class="waves-effect waves-light btn-small  light-green darken-1 tooltipped" data-position="bottom" data-tooltip="Edit"><i class="material-icons">edit</i></a>
+                        <a class="waves-effect waves-light btn-small red accent-2 tooltipped" data-position="bottom" data-tooltip="Delete"><i class="material-icons">delete</i></a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

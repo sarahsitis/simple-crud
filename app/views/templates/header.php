@@ -38,9 +38,9 @@
         <li>
             <div class="user-view">
                 <div class="background">
-                    <img src="img/bground.jpg">
+                    <img src="<?= BASEURL; ?>img/bground.jpg">
                 </div>
-                <a href="#user"><img class="circle" src="img/avatar.jpg"></a>
+                <a href="#user"><img class="circle" src="<?= BASEURL; ?>img/avatar.jpg"></a>
                 <a href="#name"><span class="white-text name">Sarah Siti S</span></a>
                 <a href="#email"><span class="white-text email">sarahsitis@gmail.com</span></a>
             </div>

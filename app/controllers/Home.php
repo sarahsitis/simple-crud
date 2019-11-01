@@ -11,4 +11,13 @@ class Home extends Controller
         $this->view('home/index', $data);
         $this->view('templates/footer');
     }
+
+    public function detail($id)
+    {
+        $data['judul'] = 'Detail';
+        $data['book'] = $this->model('Book_model')->getBookById($id);
+        $this->view('templates/header', $data);
+        $this->view('home/detail', $data);
+        $this->view('templates/footer');
+    }
 }
