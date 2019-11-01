@@ -5,28 +5,22 @@
     <table class="highlight responsive-table">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Item Name</th>
-                <th>Item Price</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Publisher</th>
+                <th>Price</th>
             </tr>
         </thead>
 
         <tbody>
-            <tr>
-                <td>Alvin</td>
-                <td>Eclair</td>
-                <td>$0.87</td>
-            </tr>
-            <tr>
-                <td>Alan</td>
-                <td>Jellybean</td>
-                <td>$3.76</td>
-            </tr>
-            <tr>
-                <td>Jonathan</td>
-                <td>Lollipop</td>
-                <td>$7.00</td>
-            </tr>
+            <?php foreach ($data['book'] as $book) : ?>
+                <tr>
+                    <td><?= $book['title']; ?></td>
+                    <td><?= $book['author']; ?></td>
+                    <td><?= $book['publisher']; ?></td>
+                    <td>Rp. <?= $book['price']; ?></td>
+                </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </div>
