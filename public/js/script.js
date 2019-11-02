@@ -31,3 +31,30 @@ function confirmation(ev) {
         }
     });
 }
+
+$(function () {
+    $('.addData').on('click', function () {
+        $('#modalLabel').html('Add New Data');
+    });
+
+    $('.editModal').on('click', function () {
+        $('#modalLabel').html('Edit Data');
+        $('.modal-footer button[type=submit]').html('Update Data');
+        $('.modal-content form').attr('action', 'http://localhost/php-practices/simple-crud/home/update');
+        const id = $(this).data('id');
+
+        $.ajax({
+            url: 'http://localhost/php-practices/simple-crud/home/getUpdate',
+            data: { id: id },
+            method: 'post',
+            dataType: 'json',
+            success: function (data) {
+                $('#title').val(data.title);
+                $('#author').val(data.author);
+                $('#publisher').val(data.publisher);
+                $('#price').val(data.price);
+                $('#id').val(data.id);
+            }
+        });
+    });
+});

@@ -48,4 +48,25 @@ class Book_model
 
         return $this->db->rowCount();
     }
+
+    public function updateBook($data)
+    {
+        $query = "UPDATE books SET 
+                title = :title,
+                author = :author,
+                publisher = :publisher,
+                price = :price
+                WHERE id = :id";
+
+        $this->db->query($query);
+        $this->db->bind('title', $data['title']);
+        $this->db->bind('author', $data['author']);
+        $this->db->bind('publisher', $data['publisher']);
+        $this->db->bind('price', $data['price']);
+        $this->db->bind('id', $data['id']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
 }

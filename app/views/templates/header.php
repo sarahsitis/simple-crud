@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?= $data['judul']; ?></title>
     <script src="<?= BASEURL; ?>public/js/sweetalert2.all.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>

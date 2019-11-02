@@ -38,4 +38,22 @@ class Home extends Controller
             exit;
         }
     }
+
+    public function getUpdate()
+    {
+        echo json_encode($this->model('Book_model')->getBookById($_POST['id']));
+    }
+
+    public function Update()
+    {
+        if ($this->model('Book_model')->updateBook($_POST) > 0) {
+            Flasher::setFlash('Updated!', 'Your Data is Updated', 'success');
+            header('Location: ' . BASEURL . 'home');
+            exit;
+        } else {
+            Flasher::setFlash('Failed!', 'Your Data is Failed to be Updated', 'success');
+            header('Location: ' . BASEURL . 'home');
+            exit;
+        }
+    }
 }
