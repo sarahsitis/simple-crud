@@ -6,3 +6,6 @@ M.Tooltip.init(tooltip);
 
 const addModal = document.querySelectorAll('.modal');
 M.Modal.init(addModal);
+
+const flashData = $('.flash-data').data('flashdata');
+console.log(flashData);

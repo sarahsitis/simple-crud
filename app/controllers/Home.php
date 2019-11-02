@@ -24,6 +24,7 @@ class Home extends Controller
     public function add()
     {
         if ($this->model('Book_model')->addNewBook($_POST) > 0) {
+            Flasher::setFlash('Succeed!', 'New Data Added', 'success');
             header('Location: ' . BASEURL . 'home');
             exit;
         }

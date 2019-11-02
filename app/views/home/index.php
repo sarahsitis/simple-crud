@@ -1,5 +1,7 @@
 <!-- content table -->
+
 <div class="container">
+    <?php Flasher::flash(); ?>
     <h3 class="center">Book List</h3>
     <a class="btn-floating btn-large waves-effect waves-light teal lighten-2 right tooltipped modal-trigger" data-position="bottom" data-tooltip="Add New Data" href="#addData"><i class="material-icons">add</i></a>
     <table class="highlight responsive-table">
@@ -67,5 +69,4 @@
             </form>
         </div>
     </div>
-
 </div>
