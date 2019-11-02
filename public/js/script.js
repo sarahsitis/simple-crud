@@ -32,6 +32,8 @@ function confirmation(ev) {
     });
 }
 
+// use the same modal to addData and editData ----------------------------------------------------------------
+
 $(function () {
     $('.addData').on('click', function () {
         $('#modalLabel').html('Add New Data');
