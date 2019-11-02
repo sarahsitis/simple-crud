@@ -3,7 +3,7 @@
         <h2 class="header">Book Detail</h2>
         <div class="card horizontal">
             <div class="card-image">
-                <img src="<?= BASEURL; ?>img/book.jpg">
+                <img src="<?= BASEURL; ?>/public/img/book.jpg">
             </div>
             <div class="card-stacked">
                 <div class="card-content">

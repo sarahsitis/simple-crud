@@ -23,9 +23,9 @@
                     <td><?= $book['publisher']; ?></td>
                     <td>Rp. <?= $book['price']; ?></td>
                     <td>
-                        <a href="<?= BASEURL; ?>home/detail/<?= $book['id']; ?>" class="waves-effect waves-light btn-small  blue lighten-2 tooltipped" data-position="bottom" data-tooltip="Detail"><i class="material-icons">details</i></a>
-                        <a class="waves-effect waves-light btn-small  light-green darken-1 tooltipped modal-trigger editModal" data-position="bottom" data-tooltip="Edit" href="#modalData" data-id="<?= $book['id']; ?>"><i class="material-icons">edit</i></a>
-                        <a href="<?= BASEURL; ?>home/delete/<?= $book['id']; ?>" class="waves-effect waves-light btn-small red accent-2 tooltipped" data-position="bottom" data-tooltip="Delete" onclick="confirmation(event);"><i class="material-icons">delete</i></a></td>
+                        <a href="<?= BASEURL; ?>/home/detail/<?= $book['id']; ?>" class="waves-effect waves-light btn-small  blue lighten-2 tooltipped" data-position="bottom" data-tooltip="Detail"><i class="material-icons">details</i></a>
+                        <a class="waves-effect waves-light btn-small  light-green darken-1 tooltipped modal-trigger editModal" data-position="bottom" data-tooltip="Edit" href="<?= BASEURL; ?>/home/edit/<?= $book['id']; ?>"><i class="material-icons">edit</i></a>
+                        <a href="<?= BASEURL; ?>/home/delete/<?= $book['id']; ?>" class="waves-effect waves-light btn-small red accent-2 tooltipped" data-position="bottom" data-tooltip="Delete" onclick="confirmation(event);"><i class="material-icons">delete</i></a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
@@ -37,29 +37,29 @@
     <div class="modal-content">
         <h4 align="center" id="modalLabel">Add New Book</h4>
         <div class="row">
-            <form action="<?= BASEURL; ?>home/add" method="post" class="col s12">
+            <form action="<?= BASEURL; ?>/home/add" method="post" class="col s12">
                 <input type="hidden" id="id" name="id">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="title" name="title" type="text" class="validate">
+                        <input id="title" name="title" type="text" class="validate" required>
                         <label for="title">Book Title</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="author" name="author" type="text" class="validate">
+                        <input id="author" name="author" type="text" class="validate" required>
                         <label for="author">Author</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="publisher" name="publisher" type="text" class="validate">
+                        <input id="publisher" name="publisher" type="text" class="validate" required>
                         <label for="publisher">Publisher</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="price" name="price" type="number" class="validate">
+                        <input id="price" name="price" type="number" class="validate" required>
                         <label for="price">Price</label>
                     </div>
                 </div>

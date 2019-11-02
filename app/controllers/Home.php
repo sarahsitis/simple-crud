@@ -21,11 +21,20 @@ class Home extends Controller
         $this->view('templates/footer');
     }
 
+    public function edit($id)
+    {
+        $data['judul'] = 'Edit';
+        $data['book'] = $this->model('Book_model')->getBookById($id);
+        $this->view('templates/header', $data);
+        $this->view('home/edit', $data);
+        $this->view('templates/footer');
+    }
+
     public function add()
     {
         if ($this->model('Book_model')->addNewBook($_POST) > 0) {
             Flasher::setFlash('Succeed!', 'New Data Added', 'success');
-            header('Location: ' . BASEURL . 'home');
+            header('Location: ' . BASEURL . '/home');
             exit;
         }
     }
@@ -34,7 +43,7 @@ class Home extends Controller
     {
         if ($this->model('Book_model')->deleteBook($id) > 0) {
             Flasher::setFlash('Deleted!', 'Your file has been deleted.', 'success');
-            header('Location: ' . BASEURL . 'home');
+            header('Location: ' . BASEURL . '/home');
             exit;
         }
     }
@@ -48,11 +57,10 @@ class Home extends Controller
     {
         if ($this->model('Book_model')->updateBook($_POST) > 0) {
             Flasher::setFlash('Updated!', 'Your Data is Updated', 'success');
-            header('Location: ' . BASEURL . 'home');
+            header('Location: ' . BASEURL . '/home');
             exit;
         } else {
-            Flasher::setFlash('Failed!', 'Your Data is Failed to be Updated', 'success');
-            header('Location: ' . BASEURL . 'home');
+            Flasher::setFlash('Failed!', 'Your Data is Failed to be Updated', 'error');
             exit;
         }
     }
