@@ -56,4 +56,13 @@ class Home extends Controller
             exit;
         }
     }
+
+    public function search()
+    {
+        $data['judul'] = 'Home';
+        $data['book'] = $this->model('Book_model')->searchBooks();
+        $this->view('templates/header', $data);
+        $this->view('home/index', $data);
+        $this->view('templates/footer');
+    }
 }

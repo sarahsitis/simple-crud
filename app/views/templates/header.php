@@ -21,9 +21,9 @@
             <div class="nav-wrapper">
                 <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
                 <a href="#" class="brand-logo" style="padding-left:10px;" data-target="slide-out">Booku</a>
-                <form>
+                <form action="<?= BASEURL ?>home/search" method="post">
                     <div class="input-field right" width="500px">
-                        <input id="search" type="search" required>
+                        <input id="search" name="search" type="search" required autocomplete="off">
                         <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                         <i class="material-icons">close</i>
                     </div>
