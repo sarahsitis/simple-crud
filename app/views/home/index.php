@@ -23,9 +23,9 @@
                     <td><?= $book['publisher']; ?></td>
                     <td>Rp. <?= $book['price']; ?></td>
                     <td>
-                        <a class="waves-effect waves-light btn-small  blue lighten-2 tooltipped" data-position="bottom" data-tooltip="Detail" href="<?= BASEURL; ?>home/detail/<?= $book['id']; ?>"><i class="material-icons">details</i></a>
+                        <a href="<?= BASEURL; ?>home/detail/<?= $book['id']; ?>" class="waves-effect waves-light btn-small  blue lighten-2 tooltipped" data-position="bottom" data-tooltip="Detail"><i class="material-icons">details</i></a>
                         <a class="waves-effect waves-light btn-small  light-green darken-1 tooltipped" data-position="bottom" data-tooltip="Edit"><i class="material-icons">edit</i></a>
-                        <a class="waves-effect waves-light btn-small red accent-2 tooltipped" data-position="bottom" data-tooltip="Delete"><i class="material-icons">delete</i></a></td>
+                        <a href="<?= BASEURL; ?>home/delete/<?= $book['id']; ?>" class="waves-effect waves-light btn-small red accent-2 tooltipped" data-position="bottom" data-tooltip="Delete" onclick="confirmation(event);"><i class="material-icons">delete</i></a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

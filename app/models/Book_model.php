@@ -38,4 +38,14 @@ class Book_model
 
         return $this->db->rowCount();
     }
+
+    public function deleteBook($id)
+    {
+        $query = "DELETE FROM books WHERE id = :id";
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
 }

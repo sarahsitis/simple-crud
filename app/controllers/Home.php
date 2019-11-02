@@ -29,4 +29,13 @@ class Home extends Controller
             exit;
         }
     }
+
+    public function delete($id)
+    {
+        if ($this->model('Book_model')->deleteBook($id) > 0) {
+            Flasher::setFlash('Deleted!', 'Your file has been deleted.', 'success');
+            header('Location: ' . BASEURL . 'home');
+            exit;
+        }
+    }
 }
